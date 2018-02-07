@@ -1,0 +1,10 @@
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\bankTrans.exe.config
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.csprojResolveAssemblyReference.cache
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.Form1.resources
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.Properties.Resources.resources
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.csproj.GenerateResource.Cache
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\bankTrans.exe
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\bankTrans.pdb
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.exe
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.pdb
+c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.Form2.resources

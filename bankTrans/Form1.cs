@@ -87,6 +87,10 @@ namespace bankTrans
                         f2.Show();
                         this.Hide();
                     }
+                    else
+                    {
+                        status_label.Text = "message code incorrect";
+                    }
                 }
                 else
                 {
@@ -97,8 +101,8 @@ namespace bankTrans
 
         public bool checkPhoneverification(string phone, string rand)
         {
-            const string account_ssid = "AC7e6ec2790317d6fecdb9b7859bd855a9";
-            const string authToken = "c703cd266655d7df17551f0f41eaaa68";
+            const string account_ssid = "your_account_ssid";
+            const string authToken = "your_account_auth_token";
 
             TwilioClient.Init(account_ssid, authToken);
 

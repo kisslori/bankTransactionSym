@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Twilio;
+using Twilio.Rest.Api.V2010.Account;
+using Twilio.Types;
 
 namespace bankTrans
 {
@@ -15,6 +18,7 @@ namespace bankTrans
     {
         public static int isLoggedIn = 0;//0 not 1 is logged in
         public Account acc = new Account();
+        public SqlConnection connection = new SqlConnection("Data Source = DESKTOP-OMJQU7F ; Initial Catalog = bankAccounts ; Integrated Security=True");
 
         public Form1()
         {
@@ -46,9 +50,8 @@ namespace bankTrans
             string user = textBox1.Text;
             string pass = textBox2.Text;
 
-            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-OMJQU7F ; Initial Catalog = bankAccounts ; Integrated Security=True");
             connection.Open();
-            string cmd = "select _username, _password, _pin, _ballance from Users where _username=@user";
+            string cmd = "select _username, _password, _pin, _ballance, _hash, _phoneNr from Users where _username=@user";
             SqlCommand command = new SqlCommand(cmd, connection);
             command.Parameters.AddWithValue("@user", user);
             SqlDataReader reader = command.ExecuteReader();
@@ -62,20 +65,60 @@ namespace bankTrans
                 long b;
                 long.TryParse(reader["_ballance"].ToString(), out b);
                 acc.ballance = b;
+                acc.hash = reader["_hash"].ToString();
+                acc.phone = reader["_phoneNr"].ToString();
             }
+            reader.Close();
+            connection.Close();
 
-            if (acc.pass == pass)
+           
+
+
+            if (acc.user_name != null)
             {
-                isLoggedIn = 1;
-                status_label.Text = " Login successful";
-                Form2 f2 = new Form2(acc);
-                f2.Show();
-                this.Hide();
+                string passDecripted = Cripting.Decrypt(acc.pass, acc.hash);
+                if (passDecripted == pass)
+                {
+                    isLoggedIn = 1;
+                    if (checkPhoneverification(acc.phone, Cripting.GetRandomAlphanumericString(4))){
+
+                        status_label.Text = " Login successful";
+                        Form2 f2 = new Form2(acc);
+                        f2.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    status_label.Text = "username or password incorrect";
+                }
+            }         
+        }
+
+        public bool checkPhoneverification(string phone, string rand)
+        {
+            const string account_ssid = "AC7e6ec2790317d6fecdb9b7859bd855a9";
+            const string authToken = "c703cd266655d7df17551f0f41eaaa68";
+
+            TwilioClient.Init(account_ssid, authToken);
+
+
+            MessageResource.Create(
+                    to: new PhoneNumber(phone),
+                    from: new PhoneNumber("+12566394823"),
+                    body: "Your authentication code is: " + rand);
+
+
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Please insert the code you received through sms to complete authentication",
+                       "Message code required", "", 0, 0);
+           
+
+            if(rand == input)
+            {
+                return true;
             }
-            else
-            {
-                status_label.Text = "username or password incorrect";
-            }            
+            return false;
+
         }
     }
 }

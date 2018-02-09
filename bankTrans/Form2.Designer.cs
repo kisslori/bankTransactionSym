@@ -106,7 +106,7 @@
             // status_label
             // 
             this.status_label.AutoSize = true;
-            this.status_label.Location = new System.Drawing.Point(185, 257);
+            this.status_label.Location = new System.Drawing.Point(16, 163);
             this.status_label.Name = "status_label";
             this.status_label.Size = new System.Drawing.Size(0, 13);
             this.status_label.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 169);
+            this.ClientSize = new System.Drawing.Size(265, 185);
             this.Controls.Add(this.status_label);
             this.Controls.Add(this.plus_button);
             this.Controls.Add(this.textBox1);
@@ -125,7 +125,7 @@
             this.Controls.Add(this.ballance_amount_label);
             this.Controls.Add(this.ballance_label);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Account overview";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -8,3 +8,12 @@ c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\De
 c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.exe
 c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.pdb
 c:\users\lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\obj\Debug\bankTrans.Form2.resources
+C:\Users\Lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\Twilio.dll
+C:\Users\Lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Lorand\documents\visual studio 2015\Projects\bankTrans\bankTrans\bin\Debug\Twilio.xml

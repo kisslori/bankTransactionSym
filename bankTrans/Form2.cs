@@ -13,7 +13,7 @@ namespace bankTrans
 {
     public partial class Form2 : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source = DESKTOP-OMJQU7F ; Initial Catalog = bankAccounts ; Integrated Security=True");
+        SqlConnection connection = new SqlConnection("Data Source = DESKTOP ; Initial Catalog = bankAccounts ; Integrated Security=True");
         public Account acc;
         public Form2()
         {

@@ -18,7 +18,7 @@ namespace bankTrans
     {
         public static int isLoggedIn = 0;//0 not 1 is logged in
         public Account acc = new Account();
-        public SqlConnection connection = new SqlConnection("Data Source = DESKTOP-OMJQU7F ; Initial Catalog = bankAccounts ; Integrated Security=True");
+        public SqlConnection connection = new SqlConnection("Data Source = DESKTOP ; Initial Catalog = bankAccounts ; Integrated Security=True");
 
         public Form1()
         {

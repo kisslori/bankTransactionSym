@@ -35,10 +35,10 @@ namespace bankTrans
             string username = "admin";
             string password = "admin";
             string pin = "1234";
-            string phone = "+40747905271";
+            string phone = "+1234567890";
             string hash = username.GetHashCode().ToString() + password.GetHashCode().ToString();
             string passEncripted = Cripting.Encrypt(password, hash);
-            SqlConnection connection = new SqlConnection("Data Source = DESKTOP-OMJQU7F ; Initial Catalog = bankAccounts ; Integrated Security=True");
+            SqlConnection connection = new SqlConnection("Data Source = DESKTOP ; Initial Catalog = bankAccounts ; Integrated Security=True");
 
             connection.Open();
             string comm = "Insert into Users values ('" + username + "', '" + passEncripted + "', " + pin + ", 0, '" + hash + "', '" + phone + "')";
